@@ -1,18 +1,46 @@
 function About() {
+  const message = {
+    mizo: `TMEZ hi kum 2000-a din Mizo zirlaite pawl, Tirunelveli-a zir mek
+  te tan a ni. Kan pawl hi in lam hla taka awm chhunga inzawm tak
+  leh chhungkua anga awm theihna atan siam a ni. Kan member-te hi
+  ṭhianṭhatna, culture programme, event leh student support hmangin
+  kan in ṭanpui tawn thin. TMEZ chuan inzawmna leh Mizo culture
+  vawnnunna a ngaih pawimawh ber a ni. Kan member zawng zawng tan
+  community nuam tak siam turin kan thawkho a ni.`,
+
+    english: `   TMEZ is a student community established in 2000 by students from
+              Mizoram studying in Tirunelveli. Our community was formed to bring
+              students together and create a sense of family away from home. We
+              support one another through friendship, cultural activities,
+              events, and student programs. TMEZ promotes unity, connection, and
+              the preservation of Mizo culture among students. Together, we
+              continue to build a strong and welcoming community for every
+              member.`,
+  };
+
   return (
     <section id="about" className="py-24 bg-white">
-      <div className="max-w-5xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold text-slate-800 mb-8">
+      <div className="max-w-7xl mx-auto px-6">
+        <h2 className="text-4xl font-bold text-slate-800 text-center mb-16">
           About Us
         </h2>
 
-        <p className="text-lg text-slate-500 leading-loose">
-          Our community platform helps students connect, communicate, and create
-          lasting memories together.
-        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-32 items-start">
+          <div className="text-left">
+            <p className="text-lg leading-loose text-slate-600">
+              {message.mizo}
+            </p>
+          </div>
+
+          <div className="text-right">
+            <p className="text-lg leading-loose text-slate-600">
+              {message.english}
+            </p>
+          </div>
+        </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default About
+export default About;

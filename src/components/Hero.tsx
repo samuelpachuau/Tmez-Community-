@@ -2,17 +2,41 @@ import { useEffect, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 
 function Hero() {
-  const images = ["./src/assets/Hero1.jpeg", "./src/assets/Hero2.jpg"];
+  const images = [
+    "./src/assets/Hero1.jpeg",
+    "./src/assets/Hero2.jpg",
+    "./src/assets/Hero3.jpeg",
+  ];
+
+  // Duplicate first image for seamless infinite slide
+  const sliderImages = [...images, images[0]];
 
   const [currentImage, setCurrentImage] = useState(0);
+  const [transition, setTransition] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+      setCurrentImage((prev) => prev + 1);
     }, 6000);
 
     return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    // When reaching duplicated image
+    if (currentImage === images.length) {
+      setTimeout(() => {
+        // Disable transition and instantly reset
+        setTransition(false);
+        setCurrentImage(0);
+
+        // Re-enable transition
+        setTimeout(() => {
+          setTransition(true);
+        }, 50);
+      }, 1000);
+    }
+  }, [currentImage]);
 
   return (
     <section
@@ -21,18 +45,23 @@ function Hero() {
     >
       {/* Dynamic Background Image */}
       <div
-        className="absolute inset-0 flex transition-transform duration-1000 ease-in-out"
+        className="absolute inset-0 flex"
         style={{
-          width: `${images.length * 100}%`,
-          transform: `translateX(-${currentImage * (100 / images.length)}%)`,
+          width: `${sliderImages.length * 100}%`,
+          transform: `translateX(-${
+            currentImage * (100 / sliderImages.length)
+          }%)`,
+          transition: transition
+            ? "transform 1s ease-in-out"
+            : "none",
         }}
       >
-        {images.map((image, index) => (
+        {sliderImages.map((image, index) => (
           <img
             key={index}
             src={image}
             className="w-full h-full object-cover flex-shrink-0"
-            style={{ width: `${100 / images.length}%` }}
+            style={{ width: `${100 / sliderImages.length}%` }}
           />
         ))}
       </div>
@@ -61,10 +90,6 @@ function Hero() {
         <p className="text-lg md:text-xl text-sky-100 mb-10 leading-relaxed">
           "Toward Success with God"
         </p>
-
-        <button className="bg-white text-sky-600 px-8 py-4 rounded-full font-semibold hover:scale-105 transition duration-300">
-          Explore More
-        </button>
       </div>
     </section>
   );
