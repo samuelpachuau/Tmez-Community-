@@ -3,27 +3,27 @@ function OfficeBearers() {
     {
       name: "H.Lalruatfela",
       position: "President",
-      image: "./src/assets/person1.jpg",
+      image: "./src/assets/fela.jpeg",
     },
     {
       name: "Amos PC Lalnuntluanga",
       position: "Vice President",
-      image: "./src/assets/person2.jpg",
+      image: "./src/assets/amos.jpeg",
     },
     {
       name: "Biakrinawma Pachuau",
       position: "Treasurer",
-      image: "./src/assets/person3.jpg",
+      image: "./src/assets/omoma.jpeg",
     },
     {
       name: "Lalthasangi",
       position: "Secretary",
-      image: "./src/assets/person4.jpg",
+      image: "./src/assets/thasangi.jpeg",
     },
     {
       name: "C.Zoremmawii",
       position: "Overseer",
-      image: "./src/assets/person5.jpg",
+      image: "./src/assets/cindy.jpeg",
     },
   ];
 

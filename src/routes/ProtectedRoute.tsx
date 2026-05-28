@@ -1,0 +1,21 @@
+import { Navigate } from "react-router-dom";
+
+type ProtectedRouteProps = {
+  children: React.ReactNode;
+};
+
+function ProtectedRoute({
+  children,
+}: ProtectedRouteProps) {
+
+  const isAuthenticated =
+    localStorage.getItem("isAuthenticated") === "true";
+
+  if (!isAuthenticated) {
+    return <Navigate to="/admin" />;
+  }
+
+  return children;
+}
+
+export default ProtectedRoute;

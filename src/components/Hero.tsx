@@ -88,7 +88,7 @@ function Hero() {
         </div>
 
         <p className="text-lg md:text-xl text-sky-100 mb-10 leading-relaxed">
-          "Toward Success with God"
+          "Towards Success with God"
         </p>
       </div>
     </section>
