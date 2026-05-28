@@ -25,14 +25,14 @@ function About() {
           About Us
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-32 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-32 items-start">
           <div className="text-left">
             <p className="text-lg leading-loose text-slate-600">
               {message.mizo}
             </p>
           </div>
 
-          <div className="text-right">
+          <div className="text-left md:text-right">
             <p className="text-lg leading-loose text-slate-600">
               {message.english}
             </p>

@@ -37,18 +37,18 @@ function OfficeBearers() {
         </h2>
 
         {/* Members Grid */}
-        <div className="flex flex-wrap justify-center gap-y-16 gap-x-10">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-12 gap-x-6 place-items-center">
           {members.map((member, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center w-full max-w-xs"
+              className="flex flex-col items-center text-center w-full"
             >
               
               {/* Image */}
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-44 h-44 object-cover rounded-full shadow-lg border-4 border-white"
+                className="w-24 h-24 sm:w-32 sm:h-32 md:w-44 md:h-44 object-cover rounded-full shadow-lg border-4 border-white"
               />
 
               {/* Name */}

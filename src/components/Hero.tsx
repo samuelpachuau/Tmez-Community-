@@ -8,7 +8,6 @@ function Hero() {
     "./src/assets/Hero3.jpeg",
   ];
 
-  // Duplicate first image for seamless infinite slide
   const sliderImages = [...images, images[0]];
 
   const [currentImage, setCurrentImage] = useState(0);
@@ -23,14 +22,11 @@ function Hero() {
   }, []);
 
   useEffect(() => {
-    // When reaching duplicated image
     if (currentImage === images.length) {
       setTimeout(() => {
-        // Disable transition and instantly reset
         setTransition(false);
         setCurrentImage(0);
 
-        // Re-enable transition
         setTimeout(() => {
           setTransition(true);
         }, 50);
@@ -71,8 +67,8 @@ function Hero() {
 
       {/* Hero Content */}
       <div className="relative z-10 text-center px-6 text-white max-w-5xl">
-        <div className="flex items-center justify-center gap-8">
-          <h1 className="text-xl md:text-6xl font-bold leading-tight mb-6 w-[900px] h-[140px]">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+          <h1 className="text-xl md:text-6xl font-bold leading-tight mb-6 w-full md:w-[900px] h-auto md:h-[140px]">
             <Typewriter
               words={["Tirunelveli Mizo Engineering Zirlai"]}
               loop={1}
@@ -83,7 +79,8 @@ function Hero() {
 
           <img
             src="./src/assets/TmezLogoTransparent.png"
-            className="w-40 md:w-56"
+            className="w-24 md:w-56"
+            alt="TMEZ Logo"
           />
         </div>
 
