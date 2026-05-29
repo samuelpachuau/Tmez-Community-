@@ -34,7 +34,7 @@ function OfficeBearers() {
   ];
 
   return (
-    <section id="office-bearers" className="sticky top-0 z-20 py-10 bg-[#9FB2AC] min-h-screen rounded-t-[40px] shadow-2xl pb-[100vh]">
+    <section id="office-bearers" className="sticky top-0 z-20 py-6 bg-[#9FB2AC] min-h-screen rounded-t-[40px] shadow-2xl pb-[100vh]">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Heading */}
@@ -45,7 +45,7 @@ function OfficeBearers() {
         </h2>
 
         {/* Members Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-12 gap-x-6 place-items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-8 gap-x-5 place-items-center">
           {members.map((member, index) => (
             <div
               key={index}
