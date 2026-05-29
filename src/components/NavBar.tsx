@@ -42,21 +42,21 @@ function Navbar() {
 
           <li>
             <a
-              href="#memories"
+              href="#office-bearers"
               className="text-3xl font-semibold hover:text-sky-500 transition"
               onClick={() => setIsOpen(false)}
             >
-              Our Memories
+              Office Bearers
             </a>
           </li>
 
           <li>
             <a
-              href="#contact"
+              href="#memories"
               className="text-3xl font-semibold hover:text-sky-500 transition"
               onClick={() => setIsOpen(false)}
             >
-              Contact Us
+              Our Memories
             </a>
           </li>
         </ul>

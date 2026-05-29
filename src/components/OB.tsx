@@ -34,11 +34,13 @@ function OfficeBearers() {
   ];
 
   return (
-    <section id="office-bearers" className="sticky top-0 z-20 py-10 bg-[#f8f7f4] min-h-screen rounded-t-[40px] shadow-2xl pb-[100vh]">
+    <section id="office-bearers" className="sticky top-0 z-20 py-10 bg-[#9FB2AC] min-h-screen rounded-t-[40px] shadow-2xl pb-[100vh]">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Heading */}
-        <h2 className="text-4xl font-bold text-center text-slate-800 mb-16">
+        <h2 
+        style={{ fontFamily: "Humane", fontWeight: "bold" }}
+        className="text-7xl text-center text-slate-800 mb-16">
           Office Bearers
         </h2>
 
