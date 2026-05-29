@@ -1,66 +1,23 @@
-import { useEffect, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
+import logo from "../assets/TmezLogoTransparent.png";
 
 function Hero() {
-  const images = [
-    "./src/assets/Hero1.jpeg",
-    "./src/assets/Hero2.jpg",
-    "./src/assets/Hero3.jpeg",
-  ];
-
-  const sliderImages = [...images, images[0]];
-
-  const [currentImage, setCurrentImage] = useState(0);
-  const [transition, setTransition] = useState(true);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prev) => prev + 1);
-    }, 6000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    if (currentImage === images.length) {
-      setTimeout(() => {
-        setTransition(false);
-        setCurrentImage(0);
-
-        setTimeout(() => {
-          setTransition(true);
-        }, 50);
-      }, 1000);
-    }
-  }, [currentImage]);
-
   return (
     <section
       id="home"
       className="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden"
     >
-      {/* Dynamic Background Image */}
-      <div
-        className="absolute inset-0 flex"
-        style={{
-          width: `${sliderImages.length * 100}%`,
-          transform: `translateX(-${
-            currentImage * (100 / sliderImages.length)
-          }%)`,
-          transition: transition
-            ? "transform 1s ease-in-out"
-            : "none",
-        }}
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
       >
-        {sliderImages.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            className="w-full h-full object-cover flex-shrink-0"
-            style={{ width: `${100 / sliderImages.length}%` }}
-          />
-        ))}
-      </div>
+        <source src="/Basketball.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40" />
@@ -78,7 +35,7 @@ function Hero() {
           </h1>
 
           <img
-            src="./src/assets/TmezLogoTransparent.png"
+            src={logo}
             className="w-24 md:w-56"
             alt="TMEZ Logo"
           />
