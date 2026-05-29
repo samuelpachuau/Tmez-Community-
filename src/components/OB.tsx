@@ -1,29 +1,35 @@
+import fela from "../assets/fela.jpeg";
+import amos from "../assets/amos.jpeg";
+import omoma from "../assets/omoma.jpeg";
+import thasangi from "../assets/thasangi.jpeg";
+import cindy from "../assets/cindy.jpeg";
+
 function OfficeBearers() {
   const members = [
     {
       name: "H.Lalruatfela",
       position: "President",
-      image: "./src/assets/fela.jpeg",
+      image: fela,
     },
     {
       name: "Amos PC Lalnuntluanga",
       position: "Vice President",
-      image: "./src/assets/amos.jpeg",
+      image: amos,
     },
     {
       name: "Biakrinawma Pachuau",
       position: "Treasurer",
-      image: "./src/assets/omoma.jpeg",
+      image: omoma,
     },
     {
       name: "Lalthasangi",
       position: "Secretary",
-      image: "./src/assets/thasangi.jpeg",
+      image: thasangi,
     },
     {
       name: "C.Zoremmawii",
       position: "Overseer",
-      image: "./src/assets/cindy.jpeg",
+      image: cindy,
     },
   ];
 
