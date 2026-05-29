@@ -1,6 +1,6 @@
 function Contact() {
   return (
-    <section id="contact" className="py-24 bg-white">
+    <section id="contact" className="sticky top-0 z-40 py-20 bg-[#f0eeea] min-h-screen rounded-t-[40px] shadow-2xl">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <h2 className="text-4xl font-bold text-slate-800 mb-6">
           Contact Us

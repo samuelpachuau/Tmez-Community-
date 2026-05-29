@@ -32,3 +32,21 @@ a:visited {
 .animate-scroll:hover {
   animation-play-state: paused;
 }
+
+@font-face {
+  font-family: "Humane";
+  src: url("./assets/fonts/Humane-Bold.otf") format("opentype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Humane";
+  src: url("./assets/fonts/Humane-Regular.otf") format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Tempting";
+  src: url("./assets/fonts/Tempting\ -\ PERSONAL\ USE\ ONLY.otf") format("opentype");
+  font-weight: 150;
+}

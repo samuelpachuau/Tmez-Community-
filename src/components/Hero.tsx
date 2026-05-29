@@ -5,7 +5,7 @@ function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden pb-[100vh]"
     >
       {/* Background Video */}
       <video
@@ -25,7 +25,9 @@ function Hero() {
       {/* Hero Content */}
       <div className="relative z-10 text-center px-6 text-white max-w-5xl">
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
-          <h1 className="text-xl md:text-6xl font-bold leading-tight mb-6 w-full md:w-[900px] h-auto md:h-[140px]">
+          <h1 
+          style={{ fontFamily: "Humane", fontWeight: "bold" }}
+          className="text-6xl md:text-8xl leading-tight mb-6 w-full md:w-[900px] h-auto md:h-[140px]">
             <Typewriter
               words={["Tirunelveli Mizo Engineering Zirlai"]}
               loop={1}
@@ -41,7 +43,9 @@ function Hero() {
           />
         </div>
 
-        <p className="text-lg md:text-xl text-sky-100 mb-10 leading-relaxed">
+        <p 
+        style={{ fontFamily: "Tempting" }}
+        className="text-lg md:text-xl text-sky-100 mb-10 leading-relaxed">
           "Towards Success with God"
         </p>
       </div>

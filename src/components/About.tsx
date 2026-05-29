@@ -8,18 +8,21 @@ function About() {
   vawnnunna a ngaih pawimawh ber a ni. Kan member zawng zawng tan
   community nuam tak siam turin kan thawkho a ni.`,
 
-    english: `   TMEZ is a student community established in 2000 by students from
-              Mizoram studying in Tirunelveli. Our community was formed to bring
-              students together and create a sense of family away from home. We
-              support one another through friendship, cultural activities,
-              events, and student programs. TMEZ promotes unity, connection, and
-              the preservation of Mizo culture among students. Together, we
-              continue to build a strong and welcoming community for every
-              member.`,
+    english: `TMEZ is a student community established in 2000 by students from
+    Mizoram studying in Tirunelveli. Our community was formed to bring
+    students together and create a sense of family away from home. We
+    support one another through friendship, cultural activities,
+    events, and student programs. TMEZ promotes unity, connection, and
+    the preservation of Mizo culture among students. Together, we
+    continue to build a strong and welcoming community for every
+    member.`,
   };
 
   return (
-    <section id="about" className="py-24 bg-white">
+    <section
+      id="about"
+      className="sticky top-0 z-10 py-20 bg-white min-h-screen rounded-t-[40px] shadow-[0_-8px_40px_rgba(0,0,0,0.12)] pb-[100vh]"
+    >
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-4xl font-bold text-slate-800 text-center mb-16">
           About Us

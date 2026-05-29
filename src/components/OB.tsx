@@ -28,7 +28,7 @@ function OfficeBearers() {
   ];
 
   return (
-    <section id="office-bearers" className="py-24 bg-slate-50">
+    <section id="office-bearers" className="sticky top-0 z-20 py-10 bg-[#f8f7f4] min-h-screen rounded-t-[40px] shadow-2xl pb-[100vh]">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Heading */}

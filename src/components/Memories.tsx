@@ -8,7 +8,7 @@ const duplicatedMemories = [...memories, ...memories];
 
 function Memories() {
   return (
-    <section id="memories" className="py-24 bg-sky-50 overflow-hidden">
+    <section id="memories" className="sticky top-0 z-30 py-20 bg-white min-h-screen rounded-t-[40px] shadow-2xl pb-[100vh]">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
