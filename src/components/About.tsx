@@ -21,7 +21,7 @@ function About() {
   return (
     <section
       id="about"
-      className="sticky top-0 z-10 py-20 bg-white min-h-screen rounded-t-[40px] shadow-[0_-8px_40px_rgba(0,0,0,0.12)] pb-[100vh]"
+      className="sticky top-0 z-10 py-20 bg-red-900 min-h-screen rounded-t-[40px] shadow-[0_-8px_40px_rgba(0,0,0,0.12)] pb-[100vh]"
     >
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-4xl font-bold text-slate-800 text-center mb-16">

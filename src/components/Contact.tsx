@@ -1,41 +1,52 @@
+import { FaInstagram, FaYoutube } from "react-icons/fa";
+
 function Contact() {
   return (
-    <section id="contact" className="sticky top-0 z-40 py-20 bg-[#f0eeea] min-h-screen rounded-t-[40px] shadow-2xl">
-      <div className="max-w-4xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold text-slate-800 mb-6">
-          Contact Us
+    <section
+      id="contact"
+      className="sticky top-0 z-40 min-h-screen bg-slate-900 text-white rounded-t-[40px] shadow-2xl py-24"
+    >
+      <div className="max-w-5xl mx-auto px-6 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          Connect With Us
         </h2>
 
-        <p className="text-slate-500 mb-10">
-          Reach out for collaborations and community activities.
+        <p className="text-slate-300 text-lg mb-16 max-w-2xl mx-auto">
+          Stay connected with TMEZ through our social media platforms.
+          Follow our latest events, activities,
+          and community updates.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
-          <input
-            type="text"
-            placeholder="Your Name"
-            className="px-6 py-4 rounded-2xl border border-sky-100 bg-sky-50 outline-none"
-          />
+        <div className="flex justify-center items-center gap-10 md:gap-16">
+          {/* Instagram */}
+          <a
+            href="https://www.instagram.com/tmez_family/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group"
+          >
+            <FaInstagram className="text-6xl md:text-8xl transition duration-300 group-hover:scale-110" />
+            <p className="mt-4 text-lg text-slate-300">
+              Instagram
+            </p>
+          </a>
 
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="px-6 py-4 rounded-2xl border border-sky-100 bg-sky-50 outline-none"
-          />
+          {/* YouTube */}
+          <a
+            href="https://www.youtube.com/@TMEZfamily"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group"
+          >
+            <FaYoutube className="text-6xl md:text-8xl transition duration-300 group-hover:scale-110" />
+            <p className="mt-4 text-lg text-slate-300">
+              YouTube
+            </p>
+          </a>
         </div>
-
-        <textarea
-          rows={5}
-          placeholder="Your Message"
-          className="w-full px-6 py-4 rounded-2xl border border-sky-100 bg-sky-50 outline-none"
-        />
-
-        <button className="mt-8 bg-sky-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-sky-600 transition">
-          Send Message
-        </button>
       </div>
     </section>
-  )
+  );
 }
 
-export default Contact
+export default Contact;
