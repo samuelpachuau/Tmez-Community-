@@ -13,7 +13,7 @@ function Memories() {
         <div className="text-center mb-16">
           <h2 
           style={{ fontFamily: "Humane", fontWeight: "bold" }}
-          className="text-3xl md:text-7xl text-red-600 mb-4">
+          className="text-7xl text-red-600 mb-4">
             Our Memories
           </h2>
         </div>
