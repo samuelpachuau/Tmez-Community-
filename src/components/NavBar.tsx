@@ -59,6 +59,16 @@ function Navbar() {
               Our Memories
             </a>
           </li>
+
+          <li>
+            <a
+              href="#contact"
+              className="text-3xl font-semibold hover:text-sky-500 transition"
+              onClick={() => setIsOpen(false)}
+            >
+              Connect With Us
+            </a>
+          </li>
         </ul>
       </nav>
     </>
