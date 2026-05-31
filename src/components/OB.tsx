@@ -34,42 +34,48 @@ function OfficeBearers() {
   ];
 
   return (
-    <section id="office-bearers" className="sticky top-0 z-20 py-6 bg-[#9FB2AC] min-h-screen rounded-t-[40px] shadow-2xl pb-[100vh]">
-      <div className="max-w-7xl mx-auto px-6">
-        
+    <section
+      id="office-bearers"
+      className="sticky top-0 z-20 bg-[#9FB2AC] min-h-screen rounded-t-[40px] shadow-2xl pb-[100vh]"
+    >
+      <div className="max-w-7xl mx-auto px-6 pt-8 md:pt-4">
+
         {/* Heading */}
-        <h2 
-        style={{ fontFamily: "Humane", fontWeight: "bold" }}
-        className="text-7xl text-center text-slate-800 mb-16">
+      <h2
+  style={{ fontFamily: "Humane", fontWeight: "bold" }}
+  className="text-4xl sm:text-5xl md:text-7xl text-center text-slate-800 mb-10 sm:mb-14"
+>
           Office Bearers
         </h2>
 
         {/* Members Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-8 gap-x-5 place-items-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-6 place-items-center">
+
           {members.map((member, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center w-full"
+              className="flex flex-col items-center text-center w-full max-w-[210px] sm:max-w-[220px]"
             >
-              
+
               {/* Image */}
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-24 h-24 sm:w-32 sm:h-32 md:w-44 md:h-44 object-cover rounded-full shadow-lg border-4 border-white"
+                className="w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 object-cover rounded-full shadow-lg border-4 border-white"
               />
 
-              {/* Name */}
-              <h3 className="mt-6 text-2xl font-semibold text-slate-800">
-                {member.name}
-              </h3>
+    <h3 className="mt-4 text-base sm:text-lg md:text-xl font-semibold text-slate-800 leading-tight whitespace-nowrap overflow-hidden text-ellipsis">
+  {member.name}
+</h3>
 
               {/* Position */}
-              <p className="mt-2 text-lg text-slate-500">
+              <p className="mt-1 text-sm sm:text-base md:text-base text-slate-500">
                 {member.position}
               </p>
+
             </div>
           ))}
+
         </div>
       </div>
     </section>

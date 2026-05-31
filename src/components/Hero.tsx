@@ -5,7 +5,7 @@ function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden"
+     className="relative min-h-[100vh] md:min-h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Background Video */}
       <video
@@ -13,7 +13,7 @@ function Hero() {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover object-[50%_center]"
       >
         <source src="/Basketball.mp4" type="video/mp4" />
         Your browser does not support the video tag.
@@ -23,11 +23,12 @@ function Hero() {
       <div className="absolute inset-0 bg-black/40" />
 
       {/* Hero Content */}
-      <div className="relative z-10 text-center px-6 text-white max-w-5xl">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
-          <h1 
-          style={{ fontFamily: "Humane", fontWeight: "bold" }}
-          className="text-6xl md:text-8xl leading-tight mb-6 w-full md:w-[900px] h-auto md:h-[140px]">
+      <div className="relative z-10 text-center px-4 sm:px-6 text-white max-w-6xl">
+        <div className="flex flex-col items-center justify-center gap-4 md:flex-row md:gap-8">
+          <h1
+            style={{ fontFamily: "Humane", fontWeight: "bold" }}
+            className="text-4xl sm:text-5xl md:text-8xl leading-tight w-full md:w-[900px]"
+          >
             <Typewriter
               words={["Tirunelveli Mizo Engineering Zirlai"]}
               loop={1}
@@ -38,14 +39,15 @@ function Hero() {
 
           <img
             src={logo}
-            className="w-24 md:w-56"
             alt="TMEZ Logo"
+            className="w-20 sm:w-28 md:w-56"
           />
         </div>
 
-        <p 
-        style={{ fontFamily: "Tempting" }}
-        className="text-lg md:text-xl text-sky-100 mb-10 leading-relaxed">
+        <p
+          style={{ fontFamily: "Tempting" }}
+          className="mt-4 text-base sm:text-lg md:text-xl text-sky-100 leading-relaxed"
+        >
           "Towards Success with God"
         </p>
       </div>
